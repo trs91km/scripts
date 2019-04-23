@@ -1,7 +1,7 @@
 #!/bin/bash
-ADMIN_SSH_PASSWORD=mumbojumbo
+ADMIN_SSH_PASSWORD=*******
 ADMIN_SSH_USER=root
-ADMIN_SERVER_IP=192.168.1.37
+ADMIN_SERVER_IP=X.X.X.X
 ADMIN_SSH_PORT=22
 THRESHOLD=10
 DISK_SIZE=`df -h | grep sda2 | awk '{print $5}' | sed 's/%//g'`
