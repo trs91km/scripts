@@ -7,9 +7,9 @@ function monitor()
 {
 if [ "$OLD_COUNT" -eq "$NEW_COUNT" ]; then
 echo "`/bin/date` Everything is file" >> $PATH/$LOG
-elif [ "$OLD_COUNT" -lt "$NEW_COUNT" ]; then
-echo "`/bin/date` Alert!! log is missing, Someone removed log" >> $PATH/$LOG
 elif [ "$OLD_COUNT" -gt "$NEW_COUNT" ]; then
+echo "`/bin/date` Alert!! log is missing, Someone removed log" >> $PATH/$LOG
+elif [ "$OLD_COUNT" -lt "$NEW_COUNT" ]; then
 echo "`/bin/date` Changes happened in GIT repo" >> $PATH/$LOG
 fi
 }
