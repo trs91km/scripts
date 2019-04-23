@@ -1,6 +1,6 @@
 #!/bin/bash
 PATH=/opt/gity
-OLD_COUNT=$STORED_COUNT
+OLD_COUNT=`/bin/cat $PATH/.LOG_COUNT.txt`
 LOG=.git_log.txt
 NEW_COUNT=`/usr/bin/wc -l  .git/logs/HEAD  | /bin/awk '{print $1}'`
 function monitor()
@@ -17,10 +17,10 @@ fi
 cd $PATH
 echo $OLD_COUNT
 if [ -z $OLD_COUNT ]; then
-OLD_COUNT=$NEW_COUNT
+echo "$NEW_COUNT" > $PATH/.LOG_COUNT.txt
 monitor
 else
 monitor
-STORED_COUNT=$NEW_COUNT
+echo "$NEW_COUNT" > $PATH/.LOG_COUNT.txt
 fi
 
