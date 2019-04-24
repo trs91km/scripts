@@ -1,4 +1,5 @@
 #!/bin/bash
+## sample for loop script
 PATH=/ftp/tvn/idemand4uingest/BackupADIFile
 Folders=(`/bin/ls -l /ftp/tvn/idemand4uingest/BackupADIFile | /bin/grep ^d | /bin/awk '{print $9}' | /usr/bin/tr '\n' ' '`)
 for folder in ${Folders[@]}
