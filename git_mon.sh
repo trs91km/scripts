@@ -23,4 +23,3 @@ else
 monitor
 echo "$NEW_COUNT" > $PATH/.LOG_COUNT.txt
 fi
-
