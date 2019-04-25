@@ -1,4 +1,5 @@
 #!/bin/bash
+## Added mail functionality in html format
 ADMIN_SSH_PASSWORD=*******
 ADMIN_SSH_USER=root
 ADMIN_SERVER_IP=X.X.X.X
